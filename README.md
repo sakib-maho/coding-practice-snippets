@@ -1,5 +1,12 @@
 # Coding Practice Snippets (Structured Toolkit)
 
+<!-- BrandCloud:readme-standard -->
+[![Maintained](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Showcase](https://img.shields.io/badge/Portfolio-Showcase-blue.svg)](#)
+
+_Part of the `sakib-maho` project showcase series with consistent documentation and quality standards._
+
 This repository has been upgraded from standalone scripts into a small Python algorithm toolkit.
 It groups common interview-style problems into reusable modules and includes automated tests.
 
