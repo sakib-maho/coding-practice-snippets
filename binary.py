@@ -1,29 +1,8 @@
-# Copyright (c) 2025 sakib-maho
-# Licensed under the MIT License
-# See LICENSE file for details
+"""Backward-compatible wrapper for binary search demo."""
 
-class Binary:
-    def __init__(self, array):
-        self.arr = array
-
-    def binary(self, low, high, x):
-        if high >= low:
-            mid = (high+low)//2
-
-            if self.arr[mid] == x:
-                return True
-            elif self.arr[mid] > x:
-                return self.binary(low, mid-1, x)
-            else:
-                return self.binary(mid+1, high, x)
-        else:
-            return False
+from algorithms.search import binary_search
 
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-obj = Binary(arr)
-
-validity = obj.binary(0, 9, 11)
-
-print(validity)
+if __name__ == "__main__":
+    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(binary_search(arr, 11))

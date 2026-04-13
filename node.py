@@ -1,13 +1,7 @@
-# Copyright (c) 2025 sakib-maho
-# Licensed under the MIT License
-# See LICENSE file for details
+"""Backward-compatible wrapper for jewel counting demo."""
 
-jewels = 'aA'
-stones = 'aAAbbbb'
-total = 0
-result = "".join(dict.fromkeys(jewels))
+from algorithms.strings import jewel_count
 
-for i in result:
-    total = total + stones.count(i)
 
-print(total)
+if __name__ == "__main__":
+    print(jewel_count("aA", "aAAbbbb"))

@@ -1,39 +1,7 @@
-# Copyright (c) 2025 sakib-maho
-# Licensed under the MIT License
-# See LICENSE file for details
+"""Backward-compatible wrapper for bracket validator demo."""
 
-brackets = '{[]}'
-
-if brackets[0] in ')]}' or len(brackets) == 1:
-    print("Invalid")
-    exit()
+from algorithms.strings import is_valid_brackets
 
 
-fifo = [brackets[0]]
-pointer = 0
-for i in brackets[1:]:
-    if fifo:
-        if f'{i}' != fifo[pointer]:
-            if fifo[pointer] == '(' and f'{i}' == ')':
-                fifo.pop(pointer)
-                pointer -= 1
-            elif fifo[pointer] == '{' and f'{i}' == '}':
-                fifo.pop(pointer)
-                pointer -= 1
-            elif fifo[pointer] == '[' and f'{i}' == ']':
-                fifo.pop(pointer)
-                pointer -= 1
-            else:
-                pointer += 1
-                fifo.append(i)
-        else:
-            pointer += 1
-            fifo.append(i)
-    else:
-        pointer += 1
-        fifo.append(i)
-
-if fifo:
-    print('False')
-else:
-    print('True')
+if __name__ == "__main__":
+    print(is_valid_brackets("{[]}"))

@@ -1,18 +1,10 @@
-# Copyright (c) 2025 sakib-maho
-# Licensed under the MIT License
-# See LICENSE file for details
+"""Demo runner for algorithm toolkit."""
 
-nums = [3, 2, 4]
-target = 6
+from algorithms import binary_search, is_valid_brackets, jewel_count, two_sum
 
-for i in range(len(nums)-1):
-    for j in range(i+1, len(nums)):
-        if nums[i] + nums[j] == target:
-            print(f'[{i}, {j}]')
-            print(nums[i], nums[j])
-            print(nums)
-            break
 
-    # if nums[i] + nums[i+1] == target:
-    #     print(f'[{i}, {i+1}]')
-    #     break
+if __name__ == "__main__":
+    print("two_sum:", two_sum([3, 2, 4], 6))
+    print("binary_search:", binary_search([1, 2, 3, 4, 5], 4))
+    print("is_valid_brackets:", is_valid_brackets("{[()]}"))
+    print("jewel_count:", jewel_count("aA", "aAAbbbb"))
